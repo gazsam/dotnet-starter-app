@@ -16,6 +16,20 @@ namespace dotnet_starter_app.Controllers
             return View();
         }
 
+        // GET: /Home/AddService/
+
+        public ActionResult AddService()
+        {
+            return View();
+        }
+
+        // GET: /Home/UseService/
+
+        public ActionResult UseService()
+        {
+            return View();
+        }
+
         
     }
 }
