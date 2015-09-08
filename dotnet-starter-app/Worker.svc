@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="dotnet_starter_app.Worker" CodeBehind="Worker.svc.cs" %>
