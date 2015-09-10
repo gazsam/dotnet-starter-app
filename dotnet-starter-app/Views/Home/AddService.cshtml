@@ -1,5 +1,40 @@
 ﻿@{
     ViewBag.Title = "AddService";
 }
+<div class="container" style="margin-bottom:30px">
+    <script>
+        $(function () {
+            $(".collapsediv").hide();
 
-<h2>AddService</h2>
+            $('.togglebtn').bind('click', function () {
+                $(".collapsediv").hide();
+                var target_id = this.id;
+                console.log("#" + target_id + "_div");
+                $("#" + target_id + "_div").slideDown();
+                
+            });
+        });
+    </script>
+    <h2>ALS Services</h2>
+
+    <h3>@Html.Raw(ViewBag.json)</h3>
+    <div>
+        <button id="redis" class="btn btn-default togglebtn" type="button">
+            Redis
+        </button>
+        <button id="mongo" class="btn btn-success togglebtn" type="button">
+            MongoDB
+        </button>
+    </div>
+    <div class="collapsediv" id="redis_div">
+        <div class="well">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="mongo_div">
+        <div class="well">
+            1...
+        </div>
+    </div>
+
+</div>

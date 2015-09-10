@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace dotnet_starter_app.Controllers
 {
@@ -20,6 +21,14 @@ namespace dotnet_starter_app.Controllers
 
         public ActionResult AddService()
         {
+            //Ask for environment variables
+            string vcap = Environment.GetEnvironmentVariable("VCAP_SERVICES");
+            //If we're on localhost, this will be null
+            if (vcap != null)
+            {
+                JObject services = Newtonsoft.Json.Linq.JObject.Parse(vcap);
+                ViewBag.json = services;
+            }
             return View();
         }
 

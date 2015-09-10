@@ -1,6 +1,8 @@
 C:\dotnet-starter-app\ServiceTestClient\bin\Debug\ServiceTestClient.exe.config
 C:\dotnet-starter-app\ServiceTestClient\bin\Debug\ServiceTestClient.exe
 C:\dotnet-starter-app\ServiceTestClient\bin\Debug\ServiceTestClient.pdb
+C:\dotnet-starter-app\ServiceTestClient\bin\Debug\Newtonsoft.Json.dll
+C:\dotnet-starter-app\ServiceTestClient\bin\Debug\Newtonsoft.Json.xml
 C:\dotnet-starter-app\ServiceTestClient\obj\Debug\ServiceTestClient.csprojResolveAssemblyReference.cache
 C:\dotnet-starter-app\ServiceTestClient\obj\Debug\ServiceTestClient.exe
 C:\dotnet-starter-app\ServiceTestClient\obj\Debug\ServiceTestClient.pdb

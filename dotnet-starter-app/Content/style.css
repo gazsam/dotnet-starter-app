@@ -221,6 +221,11 @@ color: #ccc;
 margin-top:40px;
 }
 
+/*Services header*/
+
+.collapsediv {
+    margin-top:10px;
+}
 
 /* Responsive View
 =================================*/
