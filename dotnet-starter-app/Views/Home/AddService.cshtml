@@ -1,7 +1,7 @@
 ﻿
 <div class="container" style="margin-bottom:30px">
     <script>
-    var vcap = @Html.Raw(ViewBag.Json);
+        var vcap = @Html.Raw(ViewBag.Json);
         var services = ["filesystem-1.0", "harbor-1.0", "memcached-1.4", "mongodb-2.4", "mysql-5.5", "postgresql-9.1", "rabbitmq3-3.1", "mssql2014"];
         $(function () {
             $(".collapsediv").hide();
@@ -9,9 +9,11 @@
                 var escaped_id = v.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
                 if(vcap[v]){
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
+                    $("#"+escaped_id+"_div").find("div.off").hide();
                 }
                 else{
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-default togglebtn' type='button'>"+v+"</button>");
+                    $("#"+escaped_id+"_div").find("div.on").hide();
                 }
             });
 
@@ -28,14 +30,20 @@
     <div id="buttons">
 
     </div>
-    <div class="collapsediv" id="filesystem-1\\.0_div">
-        <div class="well">
+    <div class="collapsediv" id="filesystem-1.0_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
             0...
         </div>
     </div>
-    <div class="collapsediv" id="mongodb-2\\.4_div">
-        <div class="well">
+    <div class="collapsediv" id="mongodb-2.4_div">
+        <div class="well on">
             1...
+        </div>
+        <div class="well off">
+            0...
         </div>
     </div>
 

@@ -231,6 +231,11 @@ margin-top:40px;
    margin-right:10px;
 }
 
+.well.on {
+   background-color: white;
+   border: 1px solid #5bb75b; 
+}
+
 /* Responsive View
 =================================*/
 
