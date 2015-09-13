@@ -1,24 +1,20 @@
 applications:
-- name: dotnet-starter
+- name: dotnet-starter-app
   mem: 512M
   services:
     ${name}-sqlserver14-db:
       type: mssql2014
-	${name}-mysql-db:
+    ${name}-mysql-db:
       type: mysql
-	${name}-postgres-db:
+    ${name}-postgres-db:
       type: postgresql
-	${name}-rabbitmq:
-      type: rabbit
-	${name}-rabbitmq3:
-      type: rabbit3
-	${name}-mongo-db:
+    ${name}-rabbitmq3:
+      type: rabbitmq3
+    ${name}-mongo-db:
       type: mongodb
-	${name}-filesystem:
+    ${name}-filesystem:
       type: filesystem
-	${name}-harbor:
+    ${name}-harbor:
       type: harbor
-	${name}-memcached:
+    ${name}-memcached:
       type: memcached
-	${name}-sqlserver12-db:
-      type: mssql2012

@@ -14,6 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2E9625
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTestClient", "ServiceTestClient\ServiceTestClient.csproj", "{A6145DED-754D-4A7C-B158-739A3CF711FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71782135-1043-4AF0-872F-6FBBB29A88D7}"
+	ProjectSection(SolutionItems) = preProject
+		manifest.yml = manifest.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

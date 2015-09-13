@@ -27,7 +27,10 @@ namespace dotnet_starter_app.Controllers
             if (vcap != null)
             {
                 JObject services = Newtonsoft.Json.Linq.JObject.Parse(vcap);
-                ViewBag.json = services;
+                ViewBag.Json = services;
+            }
+            else {
+                ViewBag.Json = "{\"Id\":\"123\",\"filesystem\":\"hi\",\"DateOfRegistration\":\"2012-10-21T00:00:00+05:30\",\"Status\":0}";
             }
             return View();
         }
