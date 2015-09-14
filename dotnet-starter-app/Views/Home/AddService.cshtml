@@ -10,6 +10,7 @@
                 if(vcap[v]){
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.off").hide();
+                    $("#"+escaped_id+"_div").find("div.on").append(vcap[v]);
                 }
                 else{
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-default togglebtn' type='button'>"+v+"</button>");
@@ -20,7 +21,6 @@
             $('.togglebtn').bind('click', function () {
                 $(".collapsediv").hide();
                 var target_id = this.id;
-                console.log("#" + target_id + "_div");
                 $("#" + target_id + "_div").slideDown();
 
             });
@@ -32,6 +32,22 @@
     </div>
     <div class="collapsediv" id="filesystem-1.0_div">
         <div class="well on">
+
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="harbor-1.0_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="memcached-1.4_div">
+        <div class="well on">
             1...
         </div>
         <div class="well off">
@@ -39,6 +55,38 @@
         </div>
     </div>
     <div class="collapsediv" id="mongodb-2.4_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="mysql-5.5_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="postgresql-9.1_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="rabbitmq3-3.1_div">
+        <div class="well on">
+            1...
+        </div>
+        <div class="well off">
+            0...
+        </div>
+    </div>
+    <div class="collapsediv" id="mssql2014_div">
         <div class="well on">
             1...
         </div>
