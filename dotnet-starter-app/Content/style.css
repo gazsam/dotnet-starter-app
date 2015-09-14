@@ -236,6 +236,24 @@ margin-top:40px;
    border: 1px solid #5bb75b; 
 }
 
+pre {
+    border: none;
+    background-color: #555555;
+    color: white;
+    line-height: 1.3em;
+    overflow:auto;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 4px;
+}
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 /* Responsive View
 =================================*/
 
