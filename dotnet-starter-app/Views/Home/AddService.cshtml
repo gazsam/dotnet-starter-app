@@ -10,7 +10,7 @@
                 if(vcap[v]){
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.off").hide();
-                    $("#"+escaped_id+"_div").find("div.on").append("<span>"+@Html.Raw(vcap[v][0])+"<span>");
+                    $("#"+escaped_id+"_div").find("div.on").append("<span>"+JSON.stringify((vcap[v])[0],null, 2)+"<span>");
                 }
                 else{
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-default togglebtn' type='button'>"+v+"</button>");
