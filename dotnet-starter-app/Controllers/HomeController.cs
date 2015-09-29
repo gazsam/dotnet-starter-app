@@ -30,15 +30,8 @@ namespace dotnet_starter_app.Controllers
                 ViewBag.Json = services;
             }
             else {
-                ViewBag.Json = "{\"Id\":\"123\",\"filesystem-1.0\":\"hi\",\"DateOfRegistration\":\"2012-10-21T00:00:00+05:30\",\"Status\":0}";
+                ViewBag.Json = "{}";
             }
-            return View();
-        }
-
-        // GET: /Home/UseService/
-
-        public ActionResult UseService()
-        {
             return View();
         }
 
