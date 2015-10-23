@@ -26,7 +26,7 @@
             });
         });
     </script>
-    <h2>ALS Services</h2>
+    <h2>ALS Services<span style="padding-left:10px;font-size:.6em">(these are built into Cloud Foundry and enabled by your admin)</span></h2>
     <div id="buttons">
 
     </div>
@@ -43,6 +43,10 @@
             <pre>${name}-filesystem:<br />
                 &nbsp;&nbsp;type: filesystem
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
     </div>
     <div class="collapsediv" id="harbor-1.0_div">
@@ -58,6 +62,10 @@
                 ${name}-harbor:<br />
                 &nbsp;&nbsp;type: harbor
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
     </div>
     <div class="collapsediv" id="memcached-1.4_div">
@@ -72,6 +80,10 @@
             <pre>
                 ${name}-memcached:<br />
                 &nbsp;&nbsp;type: memcached
+            </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
             </pre>
         </div>
     </div>
@@ -89,6 +101,10 @@
                 ${name}-mongodb:<br />
                 &nbsp;&nbsp;type: mongodb
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
     </div>
     <div class="collapsediv" id="mysql-5.5_div">
@@ -105,6 +121,10 @@
                 ${name}-mysql:<br />
                 &nbsp;&nbsp;type: mysql
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
     </div>
     <div class="collapsediv" id="postgresql-9.1_div">
@@ -119,6 +139,10 @@
             <pre>
                 ${name}-postgresql:<br />
                 &nbsp;&nbsp;type: postgresql
+            </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
             </pre>
         </div>
     </div>
@@ -135,6 +159,10 @@
                 ${name}-rabbitmq3:<br />
                 &nbsp;&nbsp;type: rabbitmq3
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
     </div>
     <div class="collapsediv" id="mssql2014_div">
@@ -150,7 +178,15 @@
                 ${name}-mssql2014:<br />
                 &nbsp;&nbsp;type: mssql2014
             </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
         </div>
+    </div>
+    <h2>User-Provided Services<span style="padding-left:10px;font-size:.6em">(these are externally provisioned and enabled)</span></h2>
+    <div id="buttons">
+
     </div>
 
 </div>
