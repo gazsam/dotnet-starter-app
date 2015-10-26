@@ -2,7 +2,8 @@
 <div class="container" style="margin-bottom:30px">
     <script>
     var vcap = @Html.Raw(ViewBag.Json);
-        var services = ["filesystem-1.0", "harbor-1.0", "memcached-1.4", "mongodb-2.4", "mysql-5.5", "postgresql-9.1", "rabbitmq3-3.1", "mssql2014"];
+        
+        var services = ["filesystem-1.0", "harbor-1.0", "memcached-1.4", "mongodb-2.4", "mysql-5.5", "postgresql-9.1", "rabbitmq3-3.1", "mssql2014", "redis-2.8"];
         $(function () {
             $(".collapsediv").hide();
             $.each(services, function( i, v ) {
@@ -35,6 +36,7 @@
 
         </div>
         <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the filesystem service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service filesystem dotnet-starter-filesystem dotnet-starter
@@ -53,7 +55,8 @@
         <div class="well on">
         </div>
         <div class="well off">
-            <p>To create an instance of the filesystem service, execute the  commands below in the directory containing the your app:</p>
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
+            <p>To create an instance of the harbor port service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service harbor dotnet-starter-harbor dotnet-starter
             </pre>
@@ -72,6 +75,7 @@
         <div class="well on">
         </div>
         <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the memecached service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service memcached dotnet-starter-memcached dotnet-starter
@@ -92,6 +96,7 @@
             
         </div>
         <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the mongo service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service mongodb dotnet-starter-mongodb dotnet-starter
@@ -112,6 +117,7 @@
 
         </div>
         <div class="well off">
+            <div class="alert alert-success" role="alert">This service was created during the microcloud creation process. The steps below will make it available for your app.</div>
             <p>To create an instance of the mysql service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service mysql dotnet-starter-mysql dotnet-starter
@@ -131,6 +137,7 @@
         <div class="well on">
         </div>
         <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the postgres service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service postgresql dotnet-starter-postgresql dotnet-starter
@@ -150,6 +157,7 @@
         <div class="well on">
         </div>
         <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the rabbit service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service rabbitmq3 dotnet-starter-rabbitmq3 dotnet-starter
@@ -169,6 +177,7 @@
         <div class="well on">
         </div>
         <div class="well off">
+            <div class="alert alert-success" role="alert">This service was created during the microcloud creation process. The steps below will make it available for your app.</div>
             <p>To create an instance of the sql server service, execute the  commands below in the directory containing the your app:</p>
             <pre>helion
                 create-service mssql2014 dotnet-starter-mssql2014 dotnet-starter
@@ -177,6 +186,26 @@
             <pre>
                 ${name}-mssql2014:<br />
                 &nbsp;&nbsp;type: mssql2014
+            </pre>
+            <p>After the steps above, deploy the app and refresh this page. </p>
+            <pre>helion
+                push --stack win2012r2
+            </pre>
+        </div>
+    </div>
+    <div class="collapsediv" id="redis-2.8_div">
+        <div class="well on">
+        </div>
+        <div class="well off">
+            <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
+            <p>To create an instance of the redis service, execute the  commands below in the directory containing the your app:</p>
+            <pre>helion
+                create-service redis dotnet-starter-redis dotnet-starter
+            </pre>
+            <p>You can also uncomment the following in the manifest.yml and push the app again.</p>
+            <pre>
+                ${name}-redis:<br />
+                &nbsp;&nbsp;type: redis
             </pre>
             <p>After the steps above, deploy the app and refresh this page. </p>
             <pre>helion

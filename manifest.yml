@@ -1,11 +1,13 @@
 applications:
-- name: dotnet-starter-app
+- name: dotnet
   mem: 512M
   services:
     ${name}-sqlserver14-db:
       type: mssql2014
-#    ${name}-mysql-db:
-#      type: mysql
+    ${name}-mysql-db:
+     type: mysql
+#    ${name}-redis:
+#      type: redis
 #    ${name}-postgres-db:
 #      type: postgresql
 #    ${name}-rabbitmq3:

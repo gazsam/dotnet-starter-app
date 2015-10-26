@@ -30,3 +30,6 @@ C:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.WebPages.Razor.xml
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\dotnet_starter_app.dll
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\dotnet_starter_app.pdb
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\web-role.csprojResolveAssemblyReference.cache
+C:\dotnet-starter-app\dotnet-starter-app\bin\StackExchange.Redis.dll
+C:\dotnet-starter-app\dotnet-starter-app\bin\StackExchange.Redis.pdb
+C:\dotnet-starter-app\dotnet-starter-app\bin\StackExchange.Redis.xml
