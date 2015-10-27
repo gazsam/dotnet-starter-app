@@ -325,6 +325,16 @@
     <div class="collapsediv" id="mssql2014_div">
         <div class="well on">
             <div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>
+            <script type="syntaxhighlighter" class="brush: xml">
+                <![CDATA[
+                <!--Replace web.config connectionstring with CF variables as shown below-->
+                <connectionstrings>
+                    <!--<add name="DefaultConnection" providername="System.Data.SqlClient" connectionstring="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-dotnet_starter_app-20150902190110;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-dotnet_starter_app-20150902190110.mdf" /> -->
+                    <add name="DefaultConnection" connectionstring="Server={dotnet-sqlserver14-db#hostname},{dotnet-sqlserver14-db#port};Database={dotnet-sqlserver14-db#name};User Id={dotnet-sqlserver14-db#username};Password={dotnet-sqlserver14-db#password};MultipleActiveResultSets=true;" providername="System.Data.SqlClient" />
+                </connectionstrings>
+
+                ]]>
+            </script>
         </div>
         <div class="well off">
             <div class="alert alert-success" role="alert">This service was created during the microcloud creation process. The steps below will make it available for your app.</div>
