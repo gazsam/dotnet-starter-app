@@ -28,14 +28,16 @@ namespace dotnet_starter_app
             "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/codeformat").Include(
-            "~/Scripts/shBrushCSharp.js",
+            "~/Scripts/shCore.js",
             "~/Scripts/shBrushXml.js",
-            "~/Scripts/shCore.js"));
+            "~/Scripts/shBrushCSharp.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/bootstrap.css",
                         "~/Content/bootstrap-responsive.css",
                         "~/Content/bootstrap-responsive.min.css",
+                        "~/Content/shCore.css",
+                        "~/Content/shThemeDefault.css",
                         "~/Content/bootstrap.min.css",
                         "~/Content/style.css"));
 
