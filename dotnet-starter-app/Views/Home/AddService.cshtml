@@ -11,6 +11,7 @@
                 if(vcap[v]){
                     $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.off").hide();
+                    $("#"+escaped_id+"_div").find("div.on").append("<div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>");
                     $("#"+escaped_id+"_div").find("div.on").append("<pre>"+JSON.stringify((vcap[v])[0],null, "\t")+"</pre>");
                 }
                 else{
