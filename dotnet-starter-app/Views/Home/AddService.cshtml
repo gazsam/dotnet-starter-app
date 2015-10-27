@@ -103,7 +103,66 @@
     <div class="collapsediv" id="mongodb-2.4_div">
         <div class="well on">
             <div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>
-        </div>
+            <script type="syntaxhighlighter" class="brush: csharp">
+                <![CDATA[
+                //add references
+                // using Newtonsoft.Json.Linq
+                // using MongoDB.Driver
+                // using MongoDB.Bson
+                // using System.Threading.Tasks
+
+                try
+                {
+
+                string vcapMongo = Environment.GetEnvironmentVariable("VCAP_SERVICES");
+
+                JObject servicesMongo = Newtonsoft.Json.Linq.JObject.Parse(vcapMongo);
+                string uriMongo = servicesMongo["mongodb-2.4"].First["credentials"]["uri"].ToString();
+                var client = new MongoClient(uriMongo);
+                var dbName = servicesMongo["mongodb-2.4"].First["credentials"]["db"].ToString();
+                var database = client.GetDatabase(dbName);
+
+                var collection = database.GetCollection
+                <bsondocument>
+                    ("mycollection");
+
+                    var document = new BsonDocument
+                    {
+                    { "name", "MySampleDocument" },
+                    { "type", "Database" },
+                    { "count", 1 },
+                    { "info", new BsonDocument
+                    {
+                    { "x", 1 },
+                    { "y", 1 }
+                    }}
+                    };
+
+                    Task.WaitAll(collection.InsertOneAsync(document));
+
+                    Task<long>
+                        count = collection.CountAsync(new BsonDocument());
+                        count.Wait();
+
+
+                        /*If using async method you just need to do this:
+                        * var count = await collection.CountAsync(new BsonDocument());
+                        Console.WriteLine(count);*/
+
+                        Task<bsondocument>
+                            fetchDocument = collection.Find(new BsonDocument()).FirstOrDefaultAsync();
+                            fetchDocument.Wait();
+
+                            catch (Exception e)
+                            {
+                            //Handle exception
+                            }
+                            }
+
+
+                            ]]>
+            </script>
+         </div>
         <div class="well off">
             <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
             <p>To create an instance of the mongo service, execute the  commands below in the directory containing the your app:</p>
@@ -193,6 +252,58 @@
     <div class="collapsediv" id="rabbitmq3-3.1_div">
         <div class="well on">
             <div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>
+
+            <script type="syntaxhighlighter" class="brush: csharp">
+                <![CDATA[
+
+                //add references
+                // using Newtonsoft.Json.Linq
+                // using RabbitMQ.Client
+                //using RabbitMQ.Client.Events
+
+
+                try
+                {
+
+                string vcapRabbit = Environment.GetEnvironmentVariable("VCAP_SERVICES");
+
+                JObject servicesRabbit = Newtonsoft.Json.Linq.JObject.Parse(vcapRabbit);
+                string server = servicesRabbit["rabbitmq-2.8"].First["credentials"]["host"].ToString();
+                string port = servicesRabbit["rabbitmq-2.8"].First["credentials"]["port"].ToString();
+                string user = servicesRabbit["rabbitmq-2.8"].First["credentials"]["user"].ToString();
+                string password = servicesRabbit["rabbitmq-2.8"].First["credentials"]["password"].ToString();
+                string vhost = servicesRabbit["rabbitmq-2.8"].First["credentials"]["vhost"].ToString();
+
+                var factory = new ConnectionFactory {
+                    HostName = server ,
+                    VirtualHost = vhost,
+                    Port = int.Parse(port),
+                    UserName = user,
+                    Password = password};
+
+                factory.ToString();
+
+                var connection = factory.CreateConnection();
+                var channel = connection.CreateModel();
+
+                channel.QueueDeclare(queue: "hello",
+                durable: false,
+                exclusive: false,
+                autoDelete: false,
+                arguments: null);
+
+
+                }
+                catch (Exception e)
+                {
+                e.ToString();
+                }
+                }
+
+
+
+                ]]>
+            </script>
         </div>
         <div class="well off">
             <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
@@ -235,6 +346,42 @@
     <div class="collapsediv" id="redis-2.8_div">
         <div class="well on">
             <div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>
+
+            <script type="syntaxhighlighter" class="brush: csharp">
+                <![CDATA[
+
+                //add using statements
+                //using Newtonsoft.Json.Linq
+                //using StackExchange.Redis
+
+                try
+                {
+                string vcap = Environment.GetEnvironmentVariable("VCAP_SERVICES");
+
+                JObject services = Newtonsoft.Json.Linq.JObject.Parse(vcap);
+                string host = services["redis-2.8"].First["credentials"]["host"].ToString();
+                string port = services["redis-2.8"].First["credentials"]["port"].ToString();
+                string password = services["redis-2.8"].First["credentials"]["password"].ToString();
+                string conn = String.Format("{0}:{1},password={2}", host, port, password);
+
+                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(conn);
+                IDatabase db = redis.GetDatabase();
+                string input = "This is an example on how to use redis in .NET";
+                db.StringSet("mykey", input);
+
+                string output = db.StringGet("mykey");
+
+
+                }
+                catch (Exception e)
+                {
+                //Handle exception
+                }
+
+                }
+
+                ]]>
+            </script>
         </div>
         <div class="well off">
             <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
