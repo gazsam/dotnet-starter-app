@@ -57,6 +57,20 @@
     <div class="collapsediv" id="harbor-1.0_div">
         <div class="well on">
             <div class='alert alert-success' role='alert'>This service is enabled and bound to your app.  Use the connection info and code snippets below to use it in your app.</div>
+            <script type="syntaxhighlighter" class="brush: csharp">
+                <![CDATA[
+                public class AccountController : Controller
+                {
+
+                // GET: /Account/Login
+                public ActionResult Login(string returnUrl)
+                {
+                ViewBag.ReturnUrl = returnUrl;
+                return View();
+                }
+
+                ]]>
+            </script>
         </div>
         <div class="well off">
             <div class="alert alert-warning" role="alert">This service was not provisioned during the microcloud creation process.  Create this service using the <a href="http://docs.hpcloud.com/#devplatform/1.3/helion/CLI/cfmgmt_growcluster_addservice.html">cf-mgmt tool</a>.</div>
