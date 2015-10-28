@@ -2,25 +2,41 @@
 <div class="container" style="margin-bottom:30px">
     
     <script>
-    
-    var vcap = @Html.Raw(ViewBag.Json);
-        
+
+        var vcap = @Html.Raw(ViewBag.Json);
+
         var services = ["filesystem-1.0", "harbor-1.0", "memcached-1.4", "mongodb-2.4", "mysql-5.5", "postgresql-9.1", "rabbitmq3-3.1", "mssql2014", "redis-2.8"];
         $(function () {
+            //Populate ALS services
             $(".collapsediv").hide();
             $.each(services, function( i, v ) {
                 var escaped_id = v.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
                 if(vcap[v]){
-                    $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.off").hide();
+                    $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-success togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.on").append("<pre>"+JSON.stringify((vcap[v])[0],null, "\t")+"</pre>");
 
                 }
                 else{
-                    $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-default togglebtn' type='button'>"+v+"</button>");
                     $("#"+escaped_id+"_div").find("div.on").hide();
+                    $("#buttons").append("<button id='"+escaped_id+"' class='btn btn-default togglebtn' type='button'>"+v+"</button>");
+
                 }
             });
+            //Populate user-provided services
+            if(vcap['user-provided'] != null) {
+                var user_provided = vcap['user_provided'];
+                $("#userprovided-services-howto_div").hide();
+
+                user_provided.forEach( function(v,i) {
+                    upName = v['name'];
+                    $("#userprovided-service-buttons").append("<button id='"+upName+"' class='btn btn-success togglebtn udbtn' type='button'>"+upName+"</button>");
+                    $("#userprovided_divs").append("<div class='collapsediv well on' id='"+upName+"_div'></div>");
+                    $("#"+upName+"_div").hide();
+                    $("#"+upName+"_div").append("<pre>"+JSON.stringify(v,null, "\t")+"</pre>");
+
+                });
+            }
 
             $('.togglebtn').bind('click', function () {
                 $(".collapsediv").hide();
@@ -412,6 +428,34 @@
     </div>
     <h2>User-Provided Services<span style="padding-left:10px;font-size:.6em">(these are externally provisioned and enabled)</span></h2>
     <div id="buttons">
+
+    </div>
+    <div id="found_userprovided_services">
+        <div id="userprovided-service-buttons">
+
+        </div>
+
+
+
+
+            <div id='userprovided_divs'>
+                <div id="userprovided-services-howto_div" class="well off">
+                    <div class="alert alert-warning" role="alert">
+                        No <a href="http://docs.hpcloud.com/devplatform/1.2/helion/user/services/1.2user-provided.html">User Provided Services</a> have been created and bound to this app. Create and bind to one by following the steps below. 
+                    </div>
+                    <pre>helion create-service user-provided [name of service]</pre>
+                    <p>The helion CLI will prompt you to specify credential keys and values (note defaults of hostname, port, password):</p>
+                    <pre>Which credentials to use for connections [hostname, port, password]:</pre>
+                    <p>
+                        You can override these defaults with your own credential keys, separate keys with commas, and the CLI will then prompt you for values of each credential key.<br />
+                        When you've created your service, you need to bind it to specific applications
+                    </p>
+                    <pre>helion bind-service [service name] [application name]</pre>
+                </div>
+
+
+            </div>
+
 
     </div>
 

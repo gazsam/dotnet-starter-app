@@ -32,6 +32,7 @@ namespace dotnet_starter_app.Controllers
             else {
                 ViewBag.Json = "{}";
             }
+            
             return View();
         }
 

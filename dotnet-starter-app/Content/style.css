@@ -254,6 +254,11 @@ code, kbd, pre, samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+div#userprovided_divs > div.well.off {
+    background-color: white;
+    border-color: #b3b3b3;
+}
+
 div.collapsediv > div.well.off {
     background-color: white;
     border-color: #b3b3b3;
