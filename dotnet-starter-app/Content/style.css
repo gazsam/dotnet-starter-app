@@ -2,6 +2,17 @@
 Global
 ============================= */
 
+@media (max-width: 759px) {
+.logo {
+    display: none;
+    }
+}
+@media (min-width: 760px) {
+.logo {
+    display: block;
+    }
+}
+
 body{
 	font-family:'Source Sans Pro', sans-serif;
 	color:#666;
