@@ -1,13 +1,11 @@
 applications:
-- name: dotnet2
+- name: dotnet
   mem: 512M
   services:
     ${name}-sqlserver14-db:
       type: mssql2014
-    ${name}-mysql-db:
-      type: mysql
-    testy:
-      type: user-provided
+#    ${name}-mysql-db:
+#      type: mysql
 #    ${name}-redis:
 #      type: redis
 #    ${name}-postgres-db:
