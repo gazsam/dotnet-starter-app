@@ -1,0 +1,2059 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CloudFoundry.CloudController.V3.Client</name>
+    </assembly>
+    <members>
+        <member name="T:CloudFoundry.CloudController.V3.Client.BaseEndpoint">
+            <summary>
+            Base class for all the Cloud Foundry endpoints.
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.AppsEndpoint">
+            <summary>
+            Apps Endpoint
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint">
+            <summary>
+            Base abstract class for Apps Endpoint
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.#ctor">
+            <summary>
+            Initializes the class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.DeleteApp(System.Nullable{System.Guid})">
+            <summary>
+            Delete an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/delete_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAssociatedProcesses(System.Nullable{System.Guid})">
+            <summary>
+            List associated processes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_processes.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAssociatedProcesses(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List associated processes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_processes.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.GettingEnvOfApp(System.Nullable{System.Guid})">
+            <summary>
+            getting the env of an app
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/getting_the_env_of_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.StartingApp(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.StartingAppRequest)">
+            <summary>
+            Starting an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/starting_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.GetApp(System.Nullable{System.Guid})">
+            <summary>
+            Get an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAllApps">
+            <summary>
+            List all Apps
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_all_apps.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAllApps(CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List all Apps
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_all_apps.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAssociatedPackages(System.Nullable{System.Guid})">
+            <summary>
+            List associated packages
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_packages.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ListAssociatedPackages(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List associated packages
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_packages.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.AssignDropletAsAppsCurrentDroplet(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.AssignDropletAsAppsCurrentDropletRequest)">
+            <summary>
+            Assigning a droplet as a an Apps current droplet
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/assigning_a_droplet_as_a_an_apps_current_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.UpdateApp(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.UpdateAppRequest)">
+            <summary>
+            Updating an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/updating_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.StoppingApp(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.StoppingAppRequest)">
+            <summary>
+            Stopping an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/stopping_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.GetProcessFromApp(System.Nullable{System.Guid},System.Object)">
+            <summary>
+            Get a Process from an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_a_process_from_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.ScalingProcessFromItsApp(System.Nullable{System.Guid},System.Object,CloudFoundry.CloudController.V3.Client.Data.ScalingProcessFromItsAppRequest)">
+            <summary>
+            Scaling a Process from its App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/scaling_a_process_from_its_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppsEndpoint.CreateApp(CloudFoundry.CloudController.V3.Client.Data.CreateAppRequest)">
+            <summary>
+            Create an App
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/apps__experimental_/create_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.AppsEndpoint.Push(System.Guid,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Pushes an application to the cloud.
+            <remarks>
+            This method is only available on the .NET 4.5 framework. 
+            Calling this method from a Windows Phone App or a Windows App will throw a <see cref="T:System.NotImplementedException"/>.
+            </remarks>
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+            <param name="appGuid">Application guid</param>
+            <param name="appPath">Path of origin from which the application will be deployed</param>
+            <param name="stack">The name of the stack the app will be running on</param>
+            <param name="buildpackGitUrl">Git URL of the buildpack</param>
+            <param name="startApplication">True if the app should be started after upload is complete, false otherwise</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.AppsEndpoint.TriggerPushProgressEvent(System.Int32,System.String)">
+            <summary>
+            Triggers the PushProgress event
+            </summary>
+            <param name="currentStep">Current progress step</param>
+            <param name="message">Message describing push progress</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.AppsEndpoint.CheckCancellation">
+            <summary>
+            Helper method that checks the cancellation token and triggers 
+            the push progress event if cancellation was requested.
+            </summary>
+            <returns>True if cancellation was requested, false otherwise.</returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.AppsEndpoint.TriggerPushProgressEvent(System.Int32,System.String,System.String[])">
+            <summary>
+            Triggers the PushProgress event
+            </summary>
+            <param name="currentStep">Current progress step</param>
+            <param name="message">Message describing push progress</param>
+            <param name="formatParameters">Format parameters for the message</param>
+        </member>
+        <member name="E:CloudFoundry.CloudController.V3.Client.AppsEndpoint.PushProgress">
+            <summary>
+            Event that is raised on specific parts of the push process.
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.PackagesEndpoint">
+            <summary>
+            Packages Endpoint
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint">
+            <summary>
+            Base abstract class for Packages Endpoint
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.#ctor">
+            <summary>
+            Initializes the class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.GetPackage(System.Nullable{System.Guid})">
+            <summary>
+            Get a Package
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/get_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.CreatePackage(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.CreatePackageRequest)">
+            <summary>
+            Create a Package
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/create_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.StagePackage(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.StagePackageRequest)">
+            <summary>
+            Stage a package
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/stage_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.DeletePackage(System.Nullable{System.Guid})">
+            <summary>
+            Delete a Package
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/delete_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.ListAllPackages">
+            <summary>
+            List all Packages
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/list_all_packages.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractPackagesEndpoint.ListAllPackages(CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List all Packages
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/packages__experimental_/list_all_packages.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PackagesEndpoint.UploadBits(System.Guid,System.IO.Stream)">
+            <summary>
+            Defines and uploads the package bits.
+            <remarks>
+            This method is only available on the .NET 4.5 framework.
+            Calling this method from a Windows Phone App or a Windows App will throw a <see cref="T:System.NotImplementedException"/>.
+            </remarks>
+            </summary>
+            <param name="packageGuid">Paclage guid</param>
+            <param name="zipStream">The zip stream.</param>
+            <exception cref="T:CloudFoundry.CloudController.Common.Exceptions.CloudFoundryException"></exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PackagesEndpoint.UploadZip(System.Uri,System.IO.Stream)">
+            <summary>
+            Uploads a stream to CloudFoundry via HTTP
+            </summary>
+            <param name="uploadUri">Uri to upload to</param>
+            <param name="zipStream">The compressed stream to upload</param>
+            <returns></returns>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.PushProgressEventArgs">
+            <summary>
+            Class that holds the progress arguments of the push operation
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.PushProgressEventArgs.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.PushProgressEventArgs.Percent">
+            <summary>
+            Gets or sets the percent of the push operation.
+            </summary>
+            <value>
+            The percent of the push operation.
+            </value>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient">
+            <summary>
+            This is the Cloud Foundry client. To use it, you need a Cloud Foundry endpoint.
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="httpProxy">The HTTP proxy.</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken,System.Uri,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="httpProxy">The HTTP proxy.</param>
+            <param name="skipCertificateValidation">if set to <c>true</c> it will skip TLS certificate validation for HTTP requests.</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken,System.Uri,System.Boolean,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="httpProxy">The HTTP proxy.</param>
+            <param name="skipCertificateValidation">if set to <c>true</c> it will skip TLS certificate validation for HTTP requests.</param>
+            <param name="authorizationUrl">Authorization Endpoint</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken,System.Uri,System.Boolean,System.Uri,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="httpProxy">The HTTP proxy.</param>
+            <param name="skipCertificateValidation">if set to <c>true</c> it will skip TLS certificate validation for HTTP requests.</param>
+            <param name="authorizationUrl">Authorization Endpoint</param>
+            <param name="useStrictStatusCodeChecking">throw exception if the successful http status code returned from the server does not match the expected code</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.#ctor(System.Uri,System.Threading.CancellationToken,System.Uri,System.Boolean,System.Uri,System.Boolean,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CloudFoundry.CloudController.V3.Client.CloudFoundryClient"/> class.
+            </summary>
+            <param name="cloudTarget">The cloud target.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="httpProxy">The HTTP proxy.</param>
+            <param name="skipCertificateValidation">if set to <c>true</c> it will skip TLS certificate validation for HTTP requests.</param>
+            <param name="authorizationUrl">Authorization Endpoint</param>
+            <param name="useStrictStatusCodeChecking">throw exception if the successful http status code returned from the server does not match the expected code</param>
+            <param name="requestTimeout">Http requests timeout</param>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Login(CloudFoundry.UAA.CloudCredentials)">
+            <summary>
+            Login using the specified credentials.
+            </summary>
+            <param name="credentials">The credentials.</param>
+            <returns>Refresh Token</returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.GenerateAuthorizationToken">
+            <summary>
+            Gets the authorization token. If the client is not authorized, an empty string is returned. If the token is expired, it generates a new one.
+            </summary>
+            <value>
+            The authorization token.
+            </value>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Login(System.String)">
+            <summary>
+            Login using the specified raw token.
+            </summary>
+            <param name="refreshToken">A raw token.</param>
+            <returns>Token Object</returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.InitEndpoints">
+            <summary>
+            Initializes all API Endpoints
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Apps">
+            <summary>
+            Gets the apps endpoint.
+            </summary>
+            <value>
+            The apps endpoint.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.AppRoutes">
+            <summary>
+            Gets the app routes endpoint.
+            </summary>
+            <value>
+            The app routes endpoint.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Droplets">
+            <summary>
+            Gets the droplets endpoint.
+            </summary>
+            <value>
+            The droplets endpoint.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Packages">
+            <summary>
+            Gets the packages endpoint.
+            </summary>
+            <value>
+            The packages endpoint.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.Processes">
+            <summary>
+            Gets the processes endpoint.
+            </summary>
+            <value>
+            The processes endpoint.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.AuthorizationToken">
+            <summary>
+            Gets the authorization token. It returns empty string if the client is not authorized. Also this method does not verify if the current token is expired.
+            </summary>
+            <value>
+            The authorization token.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.UAAClient">
+            <inheritdoc />
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.CloudFoundryClient.V2">
+            <summary>
+            Instance of CloudFoundry V2 Client 
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.AppRoutesEndpoint">
+            <summary>
+            AppRoutes Endpoint
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Base.AbstractAppRoutesEndpoint">
+            <summary>
+            Base abstract class for AppRoutes Endpoint
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppRoutesEndpoint.#ctor">
+            <summary>
+            Initializes the class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppRoutesEndpoint.ListRoutes(System.Nullable{System.Guid})">
+            <summary>
+            List routes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/list_routes.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppRoutesEndpoint.ListRoutes(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List routes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/list_routes.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractAppRoutesEndpoint.UnmapRoute(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.UnmapRouteRequest)">
+            <summary>
+            Unmap a Route
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/unmap_a_route.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.AssignDropletAsAppsCurrentDropletRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.AssignDropletAsAppsCurrentDroplet()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/assigning_a_droplet_as_a_an_apps_current_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.AssignDropletAsAppsCurrentDroplet()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/assigning_a_droplet_as_a_an_apps_current_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletRequest.DesiredDropletGuid">
+            <summary> 
+            <para>The Desired Droplet Guid</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.AssignDropletAsAppsCurrentDropletResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.AssignDropletAsAppsCurrentDroplet()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/assigning_a_droplet_as_a_an_apps_current_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.AssignDropletAsAppsCurrentDroplet()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/assigning_a_droplet_as_a_an_apps_current_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractAssignDropletAsAppsCurrentDropletResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.CreateAppRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.CreateApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/create_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.CreateApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/create_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppRequest.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppRequest.SpaceGuid">
+            <summary> 
+            <para>The Space Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppRequest.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.CreateAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.CreateApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/create_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.CreateApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/create_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreateAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.CreatePackageRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.CreatePackage()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/create_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.CreatePackage()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/create_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageRequest.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageRequest.Url">
+            <summary> 
+            <para>The Url</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.CreatePackageResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.CreatePackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/create_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.CreatePackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/create_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Url">
+            <summary> 
+            <para>The Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Error">
+            <summary> 
+            <para>The Error</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractCreatePackageResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GetAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GetApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GetApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GetDropletResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.DropletsEndpoint.GetDroplet()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/droplets__experimental_/get_a_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.DropletsEndpoint.GetDroplet()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/droplets__experimental_/get_a_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.BuildpackGitUrl">
+            <summary> 
+            <para>The Buildpack Git Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.FailureReason">
+            <summary> 
+            <para>The Failure Reason</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.DetectedStartCommand">
+            <summary> 
+            <para>The Detected Start Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.Procfile">
+            <summary> 
+            <para>The Procfile</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetDropletResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GetPackageResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.GetPackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/get_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.GetPackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/get_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Url">
+            <summary> 
+            <para>The Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Error">
+            <summary> 
+            <para>The Error</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetPackageResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GetProcessFromAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GetProcessFromApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_a_process_from_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GetProcessFromApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/get_a_process_from_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessFromAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GetProcessResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.GetProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/get_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.GetProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/get_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGetProcessResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.GettingEnvOfAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GettingEnvOfApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/getting_the_env_of_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGettingEnvOfAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.GettingEnvOfApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/getting_the_env_of_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGettingEnvOfAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGettingEnvOfAppResponse.StagingEnvJson">
+            <summary> 
+            <para>The Staging Env Json</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGettingEnvOfAppResponse.RunningEnvJson">
+            <summary> 
+            <para>The Running Env Json</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractGettingEnvOfAppResponse.ApplicationEnvJson">
+            <summary> 
+            <para>The Application Env Json</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAllAppsResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAllApps()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_all_apps.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAllApps()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_all_apps.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllAppsResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAllDropletsResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.DropletsEndpoint.ListAllDroplets()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/droplets__experimental_/list_all_droplets.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.DropletsEndpoint.ListAllDroplets()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/droplets__experimental_/list_all_droplets.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.BuildpackGitUrl">
+            <summary> 
+            <para>The Buildpack Git Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.FailureReason">
+            <summary> 
+            <para>The Failure Reason</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.DetectedStartCommand">
+            <summary> 
+            <para>The Detected Start Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.Procfile">
+            <summary> 
+            <para>The Procfile</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllDropletsResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAllPackagesResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.ListAllPackages()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/list_all_packages.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.ListAllPackages()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/list_all_packages.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Url">
+            <summary> 
+            <para>The Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Error">
+            <summary> 
+            <para>The Error</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllPackagesResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAllProcessesResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ListAllProcesses()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/list_all_processes.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ListAllProcesses()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/list_all_processes.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAllProcessesResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAssociatedPackagesResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAssociatedPackages()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_packages.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAssociatedPackages()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_packages.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Url">
+            <summary> 
+            <para>The Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Error">
+            <summary> 
+            <para>The Error</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedPackagesResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListAssociatedProcessesResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAssociatedProcesses()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_processes.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ListAssociatedProcesses()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/list_associated_processes.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListAssociatedProcessesResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ListRoutesResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppRoutesEndpoint.ListRoutes()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/list_routes.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppRoutesEndpoint.ListRoutes()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/list_routes.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.Host">
+            <summary> 
+            <para>The Host</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.Path">
+            <summary> 
+            <para>The Path</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractListRoutesResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ScalingProcessFromItsAppRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ScalingProcessFromItsApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/scaling_a_process_from_its_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ScalingProcessFromItsApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/scaling_a_process_from_its_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppRequest.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ScalingProcessFromItsAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ScalingProcessFromItsApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/scaling_a_process_from_its_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.ScalingProcessFromItsApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/scaling_a_process_from_its_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessFromItsAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ScalingProcessRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ScalingProcess()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/scaling_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ScalingProcess()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/scaling_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessRequest.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.ScalingProcessResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ScalingProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/scaling_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.ScalingProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/scaling_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractScalingProcessResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StagePackageRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.StagePackage()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/stage_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.StagePackage()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/stage_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageRequest.BuildpackGitUrl">
+            <summary> 
+            <para>The Buildpack Git Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageRequest.Stack">
+            <summary> 
+            <para>The Stack</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StagePackageResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.StagePackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/stage_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.PackagesEndpoint.StagePackage()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/packages__experimental_/stage_a_package.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.State">
+            <summary> 
+            <para>The State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.Hash">
+            <summary> 
+            <para>The Hash</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.BuildpackGitUrl">
+            <summary> 
+            <para>The Buildpack Git Url</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.FailureReason">
+            <summary> 
+            <para>The Failure Reason</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.DetectedStartCommand">
+            <summary> 
+            <para>The Detected Start Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.Procfile">
+            <summary> 
+            <para>The Procfile</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStagePackageResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StartingAppRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StartingApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/starting_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StartingApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/starting_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StartingAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StartingApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/starting_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StartingApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/starting_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStartingAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StoppingAppRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StoppingApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/stopping_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StoppingApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/stopping_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.StoppingAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StoppingApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/stopping_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.StoppingApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/stopping_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractStoppingAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.UnmapRouteRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppRoutesEndpoint.UnmapRoute()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/unmap_a_route.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUnmapRouteRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppRoutesEndpoint.UnmapRoute()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/app_routes__experimental_/unmap_a_route.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUnmapRouteRequest.RouteGuid">
+            <summary> 
+            <para>The Route Guid</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.UpdateAppRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.UpdateApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/updating_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.UpdateApp()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/updating_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppRequest.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppRequest.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.UpdateAppResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.UpdateApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/updating_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.AppsEndpoint.UpdateApp()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/apps__experimental_/updating_an_app.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.Name">
+            <summary> 
+            <para>The Name</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.DesiredState">
+            <summary> 
+            <para>The Desired State</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.TotalDesiredInstances">
+            <summary> 
+            <para>The Total Desired Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.EnvironmentVariables">
+            <summary> 
+            <para>The Environment Variables</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateAppResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.UpdateProcessRequest">
+            <summary>
+            Data class used for serializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.UpdateProcess()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/updating_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessRequest">
+            <summary>
+            Base abstract data class used for serializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.UpdateProcess()" Request
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/updating_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessRequest.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.UpdateProcessResponse">
+            <summary>
+            Data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.UpdateProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/updating_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse">
+            <summary>
+            Base abstract data class used for deserializing the "CloudFoundry.CloudController.V3.Client.ProcessesEndpoint.UpdateProcess()" Response
+            <para>For usage information, see online documentation at "http://apidocs.cloudfoundry.org/195/processes__experimental_/updating_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.Guid">
+            <summary> 
+            <para>The Guid</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.Type">
+            <summary> 
+            <para>The Type</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.Command">
+            <summary> 
+            <para>The Command</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.Instances">
+            <summary> 
+            <para>The Instances</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.CreatedAt">
+            <summary> 
+            <para>The Created At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.UpdatedAt">
+            <summary> 
+            <para>The Updated At</para>
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Data.Base.AbstractUpdateProcessResponse.Links">
+            <summary> 
+            <para>The Links</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.DropletsEndpoint">
+            <summary>
+            Droplets Endpoint
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint">
+            <summary>
+            Base abstract class for Droplets Endpoint
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint.#ctor">
+            <summary>
+            Initializes the class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint.ListAllDroplets">
+            <summary>
+            List all Droplets
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/droplets__experimental_/list_all_droplets.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint.ListAllDroplets(CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List all Droplets
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/droplets__experimental_/list_all_droplets.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint.DeleteDroplet(System.Nullable{System.Guid})">
+            <summary>
+            Delete a Droplet
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/droplets__experimental_/delete_a_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractDropletsEndpoint.GetDroplet(System.Nullable{System.Guid})">
+            <summary>
+            Get a Droplet
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/droplets__experimental_/get_a_droplet.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.ProcessesEndpoint">
+            <summary>
+            Processes Endpoint
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint">
+            <summary>
+            Base abstract class for Processes Endpoint
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.#ctor">
+            <summary>
+            Initializes the class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.ScalingProcess(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.ScalingProcessRequest)">
+            <summary>
+            Scaling a Process
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/processes__experimental_/scaling_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.GetProcess(System.Nullable{System.Guid})">
+            <summary>
+            Get a Process
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/processes__experimental_/get_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.UpdateProcess(System.Nullable{System.Guid},CloudFoundry.CloudController.V3.Client.Data.UpdateProcessRequest)">
+            <summary>
+            Updating a Process
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/processes__experimental_/updating_a_process.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.ListAllProcesses">
+            <summary>
+            List all Processes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/processes__experimental_/list_all_processes.html"</para>
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.Base.AbstractProcessesEndpoint.ListAllProcesses(CloudFoundry.CloudController.V3.Client.RequestOptions)">
+            <summary>
+            List all Processes
+            <para>For detailed information, see online documentation at: "http://apidocs.cloudfoundry.org/195/processes__experimental_/list_all_processes.html"</para>
+            </summary>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Page">
+            <summary>
+            Class that holds the href of a specific page.
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Page.Href">
+            <summary>
+            Gets the href of the page
+            </summary>
+            <value>
+            The href of the page
+            </value>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.Pagination">
+            <summary>
+            Class that holds the properties of a specific page.
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Pagination.Next">
+            <summary>
+            Gets the next URL.
+            </summary>
+            <value>
+            The next URL.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Pagination.Previous">
+            <summary>
+            Gets the previous URL.
+            </summary>
+            <value>
+            The previous URL.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Pagination.Last">
+            <summary>
+            Gets the total pages.
+            </summary>
+            <value>
+            The total pages.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.Pagination.TotalResults">
+            <summary>
+            Gets the total results.
+            </summary>
+            <value>
+            The total results.
+            </value>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1">
+            <summary>
+            Class that handles the Cloud Foundry responses that are paged.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.GetNextPage">
+            <summary>
+            Gets the next page.
+            </summary>
+            <returns>A paged collection</returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.GetPreviousPage">
+            <summary>
+            Gets the previous page.
+            </summary>
+            <returns>A paged collection</returns>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.IsLastPage">
+            <summary>
+            Determines whether [is last page].
+            </summary>
+            <returns>A paged collection</returns>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.Pagination">
+            <summary>
+            Gets or sets the page properties.
+            </summary>
+            <value>
+            The page properties.
+            </value>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.PagedResponseCollection`1.Item(System.Int32)">
+            <summary>
+            Gets the resource at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="T:CloudFoundry.CloudController.V3.Client.RequestOptions">
+            <summary>
+            The request options for a paged response.
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.RequestOptions.#ctor">
+            <summary>
+            Instantiates a new RequestOptions class
+            </summary>
+        </member>
+        <member name="M:CloudFoundry.CloudController.V3.Client.RequestOptions.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.RequestOptions.OrderDirection">
+            <summary>
+            Gets or sets the order of the results: asc (default) or desc
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.RequestOptions.OrderBy">
+            <summary>
+            Gets or sets the value to sort by: created_at or updated_at
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.RequestOptions.Page">
+            <summary>
+            Gets or sets the page of results to fetch
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.RequestOptions.Query">
+            <summary>
+            Gets or sets the parameters used to filter the result set.
+            </summary>
+        </member>
+        <member name="P:CloudFoundry.CloudController.V3.Client.RequestOptions.ResultsPerPage">
+            <summary>
+            Gets or sets the number of results per page
+            </summary>
+        </member>
+    </members>
+</doc>
