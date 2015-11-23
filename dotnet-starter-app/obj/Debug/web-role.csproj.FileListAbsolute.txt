@@ -4,7 +4,6 @@ C:\dotnet-starter-app\dotnet-starter-app\bin\dotnet_starter_app.pdb
 C:\dotnet-starter-app\dotnet-starter-app\bin\Antlr3.Runtime.dll
 C:\dotnet-starter-app\dotnet-starter-app\bin\EntityFramework.dll
 C:\dotnet-starter-app\dotnet-starter-app\bin\Microsoft.Web.Infrastructure.dll
-C:\dotnet-starter-app\dotnet-starter-app\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\dotnet-starter-app\dotnet-starter-app\bin\Newtonsoft.Json.dll
 C:\dotnet-starter-app\dotnet-starter-app\bin\StackExchange.Redis.dll
 C:\dotnet-starter-app\dotnet-starter-app\bin\System.Net.Http.Formatting.dll
@@ -33,3 +32,15 @@ C:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.WebPages.Razor.xml
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\web-role.csprojResolveAssemblyReference.cache
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\dotnet_starter_app.dll
 C:\dotnet-starter-app\dotnet-starter-app\obj\Debug\dotnet_starter_app.pdb
+c:\dotnet-starter-app\dotnet-starter-app\bin\EntityFramework.SqlServer.dll
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Net.Http.Extensions.dll
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Net.Http.Primitives.dll
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.Helpers.dll
+c:\dotnet-starter-app\dotnet-starter-app\bin\Antlr3.Runtime.pdb
+c:\dotnet-starter-app\dotnet-starter-app\bin\EntityFramework.SqlServer.xml
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Net.Http.Extensions.xml
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Net.Http.Primitives.xml
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.Helpers.xml
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.Optimization.xml
+c:\dotnet-starter-app\dotnet-starter-app\bin\System.Web.Providers.xml
+c:\dotnet-starter-app\dotnet-starter-app\obj\Debug\web-role.csproj.App.config
